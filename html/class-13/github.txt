@@ -1,0 +1,9 @@
+- install git
+- create github account
+- create repository (public - !readme.md)
+- credential Manager > windows Credentials > others account remove
+- folder > right click > open git bash here
+
+- ctrl+c , ctlr+v (not allowed)
+
+- commit === message
