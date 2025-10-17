@@ -1,0 +1,19 @@
+/* h1{
+  color: aliceblue;
+  background-color: cornflowerblue;
+} */
+
+
+/*     
+Commented text
+*/
+
+
+
+/* Universal Selector */
+
+
+*{
+  color: pink;
+  font-size: 30px;
+}
