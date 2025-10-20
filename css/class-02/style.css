@@ -1,0 +1,121 @@
+/* *{
+  color: white;
+  background-color: darkcyan;
+} */
+
+
+/* Type Selector (Element name) */
+
+/* h1{
+  background-color: burlywood;
+} */
+
+
+
+/* Class Selector */
+
+/* .heading1{
+  color: white;
+  background-color: blueviolet;
+} */
+
+
+/* .abcd{
+  color: orange;
+} 
+
+.abcd{
+color: blue;
+}
+
+p.abcd{
+  color: purple;
+}
+
+h1.abcd{
+  color: brown;
+}
+*/
+
+/* ID Selector */
+
+/* #para1{
+  color: crimson;
+} */
+
+/* /////////////////  Child Selector */
+
+/* li{
+  color: chartreuse;
+} */
+
+
+/* ol>li{
+  color: chartreuse;
+} */
+
+
+/* #myList>li{
+color: chocolate;
+} */
+
+
+/* .abcd>b{
+  background-color: darkkhaki;
+} */
+
+
+/* /////////////////  Descendant Selector */
+
+/* p>b{
+  color: pink;
+} */
+/* 
+p b{
+    color: pink;
+
+} */
+
+
+/* /////////////////  Adjacent Sibling Selector */
+
+/* h1+p{
+  background-color: aqua;
+} */
+
+/* /////////////////  General Sibling Selector */
+
+/* h1~p{
+  color: magenta;
+} */
+
+/* /////////////////  How Css Rules Casca */
+
+
+/* *{
+  color: goldenrod;
+}
+
+h1{
+  color: blue;
+} */
+
+/* p b{
+ color: goldenrod;
+} */
+
+
+/* h1 {
+  color: rgb(34, 100, 118);
+} */
+
+
+p{
+  color: grey !important;
+}
+
+
+p{
+  color: brown;
+}
+
