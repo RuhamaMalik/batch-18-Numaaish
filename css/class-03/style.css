@@ -1,0 +1,52 @@
+/* #container{
+  color: brown;
+  font-family: sans-serif;
+  border: 2px solid black;
+} */
+
+/* ///////////// 11 ------- color */
+
+
+h1{
+  /* color: #10e0c1; */
+  /* color: aqua; */
+/* color:rgba(138, 6, 6, 0.5); */
+
+/* color: hsla(196, 95%, 45%, 0.866); */
+
+}
+
+
+
+/* td{
+width: 800px;
+color: white;
+} */
+
+
+/* ////////////// 12 ------------ text */
+
+h1{
+  /* font-family:monospacee , sans-serif */
+}
+
+/* p{
+  font-size: 8px ;
+} */
+
+
+.container{
+  font-size: 20px;
+}
+
+
+.container>p{
+/* font-size: 50% ; */
+font-size: 40px;
+}
+
+/* ////////// 
+
+mern stack
+
+*/
