@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+
+/* *{
+  padding: 0;
+  margin: 0;
+} */
+/* .first{
+  font-size: 200%;
+  font-size: 2em;
+} */
+
+/* .first{
+  font-size: 24px;
+  font-size: 150%;
+}
+.second{
+  font-size: 20px;
+  font-size: 100%;
+}
+.para{
+  font-size: 75%;
+  font-size: 18px;
+} */
+
+
+/* ------ font face (hand writing) */
+
+/* 
+internal 
+-- google font
+-- font selection
+-- font download 
+-- projectfolder (Fonts) */
+
+/* @font-face {
+  font-family: playWrite;
+  src: url(./fonts/Playwrite_AU_TAS/PlaywriteAUTAS-VariableFont_wght.ttf);
+}
+
+.first {
+  font-family: playWrite;
+}
+
+@font-face {
+  font-family: Arima;
+  src: url(./fonts/Arima/Arima-VariableFont_wght.ttf);
+}
+
+.second {
+  font-family: Arima;
+} */
+
+/* external  */
+
+/* --google font */
+/* --google font selection*/
+/* --linking 
+      link
+      import
+
+
+  --apply
+
+*/
+
+/* .first{
+  font-family: "Chango", sans-serif;
+}
+
+.second{
+  font-family: "Chango", sans-serif;
+} */
+
+/* @import  */
+
+
+.first{
+  font-family: "Playwrite CU", cursive;
+}
+
+.second{
+  font-family: "Chango", sans-serif;
+}
