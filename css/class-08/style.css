@@ -1,0 +1,106 @@
+.square {
+  /* height: 300px;
+  width: 300px; */
+  /* background-color: indianred; */
+  /* background-color: rgb(47, 121, 145); */
+
+  /* border-radius: 0 50% 0 50%; */
+  /* border-radius: 30px 60px; */
+  /* border-radius:  60px; */
+
+  /* border-bottom-right-radius: 50%; */
+  /* border-radius: 100% 0% 70% 30% / 100% 100% 0% 0% ; */
+  /* border-radius:53% 50% 48% 62% / 56% 60% 0% 56%  ; */
+
+
+  /* border-radius: 0px 200px 0px 60px;
+-webkit-border-radius: 0px 200px 0px 60px;
+-moz-border-radius: 0px 200px 0px 60px;
+border: 12px groove #05adc8; */
+
+  /* display: inline-block;
+
+clip-path: circle(50% at 18% 25%); */
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* .profileImg {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  border: 5px solid rgb(202, 60, 83);
+  outline: 15px solid rgb(240, 150, 165);
+  outline-offset: 5px;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+  margin: 70px;
+} */
+
+.borderImg {
+  /* height: 400px;
+  width: 400px;
+  background-color: darkkhaki;
+  margin: 70px; */
+
+/* border-image-source: url(https://media.istockphoto.com/id/162721677/vector/border-frame-with-floral-pattern.jpg?s=612x612&w=0&k=20&c=bq5RFE0qMzfykfaHHeqPYwTG_fxSCsKXdb5P21K3QMU=); */
+
+/* border-image-source: url(https://png.pngtree.com/png-clipart/20200224/original/pngtree-awesome-modern-photo-border-png-image_5225584.jpg);
+
+border-image-slice:50;
+border-image-width: 35px;
+border-image-repeat:round; */
+
+
+}
+
+
+/* .icon{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(71, 69, 69);
+  color: white;
+  margin: 5px;
+  font-size: small;
+  text-align: center;
+}
+.icon:hover{
+  background-color: rgb(189, 93, 56);
+}
+
+.icon i{
+  vertical-align: middle;
+
+} */
+
+.list{
+  /* list-style-type :upper-alpha; */
+  /* list-style-type :lower-roman; */
+  /* list-style-type :circle; */
+  /* list-style-type :none; */
+
+  /* list-style-image: url(https://images.stockcake.com/public/e/5/a/e5ada4e3-70ae-4a27-8a52-4168aa04cdfc_medium/geometric-gold-trophy-stockcake.jpg); */
+
+}
+
+
+
+
+/* .list{
+  color: gray;
+}
+.list i{
+  color: rgb(73, 72, 72);
+  font-size: 12px;
+} */
+
+
+
