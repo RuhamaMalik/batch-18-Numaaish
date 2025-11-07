@@ -1,0 +1,32 @@
+.listPosition{
+  /* list-style-position: inside; */
+  /* list-style: inside square ; */
+}
+
+
+table{
+  border: 1px solid black;
+  width: 70%;
+  text-align: left;
+   /* empty-cells: hide; */
+
+   /* border-collapse: collapse; */
+
+   /* border-spacing: 5px 15px;  */ 
+}
+
+/* th,td{
+  padding: 5px;
+}
+.even{
+  background-color: grey;
+}
+
+.even .empty{
+ visibility: hidden;
+}
+ */
+
+
+
+ 
