@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  height: 300px;
+  width: 100vw;
+  background-color: rgba(224, 177, 116, 0.565);
+padding-top: 50px;
+  /* position: relative;
+  top: 150px; */
+
+  position: relative;
+
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: crimson;
+
+  /* position: absolute; */
+  /* right: 0; */
+  /* top: 0; */
+  /* bottom: 0;
+  right: 50%; */
+  /* z-index: -1; */
+
+  margin: 0 auto;
+  
+  position: relative;
+}
+
+.circle{
+  height: 50px;
+  width: 50px;
+  background-color: rgb(231, 227, 227);
+  border-radius: 50%;
+  /* display: inline-block; */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.circle2{
+  background-color: aqua;
+  left: 25px;
+  z-index: 1;
+}
+.circle3{
+  background-color: rgb(43, 118, 118);
+    left: 60px;
+    z-index: 2;
+
+}
+.circle4{
+  background-color: rgb(4, 79, 149);
+   left: 90px;
+    z-index: 3;
+
+}
+.circle5{
+  background-color: rgb(18, 112, 11);
+    left: 120px;
+    z-index: 4;
+}
+
+.fix {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+.sticky {
+  background-color: chocolate;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+
+  position: sticky;
+  top: 50%;
+  left: 40%;
+}
+
+/* ////////////////// Header */
+header {
+  max-width: 100vw;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+}
+
+.logo,
+nav,
+.icon,
+.count {
+  display: inline-block;
+
+}
+
+.logo {
+  width: 30%;
+}
+
+nav {
+  width: 50%;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+}
+
+.icon {
+  width: 10%;
+  color: white;
+}
+
+
+
+
+#h1 {
+  padding-top: 70px;
+}
+
+.count {
+  width: 15px;
+  height: 15px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: red;
+  font-size: xx-small;
+
+  position: absolute;
+  top: -10px;
+  right: -5px;
+}
+
+.cart{
+  position: relative;
+}
+
+/* ////////////////// Header  end*/
+
