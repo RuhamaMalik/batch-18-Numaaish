@@ -1,0 +1,104 @@
+@import url("./about.css");
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* .container {
+  height: 100vh;
+  width: 800px;
+  background-color: lightgoldenrodyellow;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.card {
+  height: 800px;
+  width: 70%;
+  background-color: white;
+  margin: 0 auto;
+   font-family: sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+  position: relative;
+  padding: 30px;
+
+}
+
+.card img{
+  position: absolute;
+  top: -120px;
+  width: 75%;
+  left: 10%;
+}
+
+.card .content{
+  position: absolute;
+  bottom: 0;
+  height: 63%;
+   text-align: center;
+}
+
+.card .content h1{
+ color: crimson;
+ font-size: 42px;
+ letter-spacing: 3px;
+}
+.card .content p{
+ width: 75%;
+ margin: 0 auto;
+ color: rgb(156, 154, 154);
+ line-height: 25px;
+ margin-top: 20px;
+}
+
+
+.btn{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: crimson;
+  color: white;
+  position: absolute;
+    top: 45%;
+
+}
+
+.btn i{
+  padding: 15px;
+}
+
+.right{
+  right: -25px;
+}
+.left{
+  left: -25px;
+} */
+
+
+
+/* blockquote {
+  float: right;
+width: 275px;
+font-size: 130%;
+font-style: italic;
+font-family: Georgia, Times, serif;
+margin: 0px 0px 10px 10px;
+padding: 10px;
+border-top: 1px solid #665544;
+border-bottom: 1px solid #665544;
+}
+
+.clear{
+  clear: both;
+} */
+
+
+
+.container{
+  height: 300px;
+  width: 300px;
+}
