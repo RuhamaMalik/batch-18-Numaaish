@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  height: 700px ;
+  width: 1500px;
+  /* background: gray url("https://thumbs.dreamstime.com/b/incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.jpg") no-repeat center ;
+  background-size: cover; */
+
+  /* background-image: linear-gradient(to left, rgb(237, 237, 237),aqua,black); */
+/* background-image: radial-gradient(white,pink,rgb(179, 119, 222)); */
+background-image: conic-gradient(black, white, gray);;
+}
