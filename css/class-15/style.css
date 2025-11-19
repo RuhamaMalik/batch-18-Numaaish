@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Transition */
+/* .container {
+  height: 600px;
+  width: 600px;
+  background-color: blueviolet;
+  transition: background-color 1s ease-in-out, width 2s ease-in-out;
+
+}
+
+.container:hover {
+  background-color: orange;
+  width: 900px;
+} */
+
+
+/* .btn {
+  width: 300px;
+  height: 50px;
+  border: none;
+  display: block;
+  margin: 30vh auto;
+
+
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  transition: transform 1s ease-in-out;
+
+}
+
+.btn:hover {
+  transform: scale(1.5);
+} */
+
+
+/* /////////////////////////////////  Animation */
+
+
+.animation {
+  width: 300px;
+  height: 300px;
+  /* background-color: aqua; */
+  margin: 30vh auto;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid black;
+  border-right-color: transparent;
+ 
+
+/* animation-name: spin ; */
+animation-duration: 2s;
+/* animation-iteration-count: 5; */
+animation-iteration-count:infinite;
+animation-direction: alternate-reverse;
+border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+     transform: rotate(360deg);
+  }
+}
+
+
+
+/* .drop-shadow{
+  filter: drop-shadow(10px 10px 4px #797982);
+  
+}
+.drop-shadow:hover{
+filter: hue-rotate(90deg)
+} */
+
+

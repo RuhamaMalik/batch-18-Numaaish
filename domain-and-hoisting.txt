@@ -1,0 +1,10 @@
+
+
+> login cpanel
+> file manager > subdomians > upload project folder
+> domains > create domain
+
+
+
+> godaddy login
+> my products > select project > Domains > DNS > add new record
