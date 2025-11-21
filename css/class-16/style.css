@@ -1,0 +1,98 @@
+/* :root{
+  --color1: hsl(205, 54%, 43%);
+  --bg-light: #dee1e3;
+  --b-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+  --border1: 5px solid rgb(4, 57, 154);
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 
+.container {
+  height: 200px;
+  width: 50px;
+  background-color: chocolate;
+
+  animation-name: expand;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out ;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes expand {
+  from {
+    width: 50px;
+  }
+
+  to {
+    width: 900px;
+  }
+
+  0%{
+    background-color: chocolate;
+  }25%{
+    background-color: cornflowerblue;
+  }50%{
+    background-color: darkseagreen;
+  }75%{
+    background-color:darkturquoise;
+  }100%{
+    background-color: darkslategrey;
+  }
+
+} */
+
+/* ///////////////////////////////////// */
+
+/* .box {
+  height: 300px;
+  width: 300px;
+  background-color: chocolate;
+
+  animation-iteration-count: infinite !important;
+  animation-direction: alternate;
+} */
+
+/* .cake{
+  display: block;
+ margin:  10vh auto;
+
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+ animation-duration: 5s;
+} */
+
+
+/* //////////////////// css variables */
+
+.head{
+  /* color: var(--color1) ; */
+  /* background-color: var(--bg-light); */
+  /* box-shadow: var(--b-shadow);
+  border-bottom: var(--border1) ; */
+}
+
+
+/* 
+.wrapper{
+  --font-s : 2em;
+  --t-shadow: 2px 2px 2px black;
+
+  width: 700px;
+  margin: 10vh auto;
+}
+
+
+h2{
+font-size:  var(--font-s);
+text-shadow: var(--t-shadow);
+
+border-left: var(--border1) ;
+}
+ */
