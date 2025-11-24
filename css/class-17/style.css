@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* .box{
+  width: 400px;
+  height: 400px;
+  background-color: aqua;
+  margin: 10vh auto;
+}
+
+
+@media only screen and (max-width: 1400px){
+.box{
+  background-color: crimson;
+}
+}
+
+
+@media only screen and (max-width:400px){
+  .box{
+    width: 90vw;
+    background-color: lightgreen;
+  }
+} */
+
+
+/* ///////////////// Example */
+
+
+/* .container {
+  max-width: 1200px;
+  min-height: 800px;
+  background-color: rgb(206, 211, 215);
+  margin: 5vh auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.sidebar {
+  height: 760px;
+  width: 30%;
+  background-color: rgb(54, 76, 245);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.form {
+  height: 760px;
+  width: 69%;
+  background-color: rgb(99, 245, 54);
+  display: inline-block;
+
+
+}
+
+
+@media only screen and (max-width:900px) {
+  .sidebar, .form {
+    display: block;
+    height: 400px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .form{
+    height: 700px ;
+  }
+}
+ */
+
+
+ .box{
+  width: 400px;
+  height: 400px;
+  background-color: aqua;
+  margin: 10vh auto;
+}
