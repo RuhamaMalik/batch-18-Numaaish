@@ -30,7 +30,7 @@
 /* ///////////////// Example */
 
 
-/* .container {
+ .container {
   max-width: 1200px;
   min-height: 800px;
   background-color: rgb(206, 211, 215);
@@ -69,12 +69,12 @@
     height: 700px ;
   }
 }
- */
+ 
 
-
+/* 
  .box{
   width: 400px;
   height: 400px;
   background-color: aqua;
   margin: 10vh auto;
-}
+} */
