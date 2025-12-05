@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --dark: black;
+  --base-color: #13b2ba;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1800px;
+  height: 100%;
+  margin: 0 auto;
+  /* border: 2px solid rgb(124, 243, 124); */
+}
+
+header {
+  min-height: 70px;
+  width: 100vw;
+  background-color: var(--dark);
+  color: white;
+
+}
+
+.header {
+  display: flex;
+  padding: 0 1em;
+  align-items: center;
+}
+
+.header .logo {
+  flex-grow: 2;
+}
+
+.header nav {
+  flex-grow: 3;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: var(--base-color);
+  flex-shrink: 0;
+  height: 70px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header nav a:hover {
+  background-color: var(--base-color);
+  color: white;
+}
+
+
+.header nav button,
+.hero .content button {
+  width: 200px;
+  height: 50px;
+  background-color: var(--base-color);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color.2s ease-in-out;
+}
+
+.header nav button:hover,
+.hero .content button:hover {
+  background-color: transparent;
+  color: var(--base-color);
+  border: 2px solid var(--base-color);
+
+}
+
+.menuIcon {
+  color: var(--base-color);
+  font-size: 2em;
+  display: none;
+}
+
+
+/* ////////////////////////////////////// Header end */
+/* ////////////////////////////////////// Hero section start */
+
+
+.hero,
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  /* background-color: burlywood; */
+}
+
+.hero img,
+.hero .content,
+.services .card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+
+.hero .content h1 {
+  font-size: 60px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.535);
+}
+
+.hero .content p {
+  font-size: 20px;
+}
+
+.hero .content button {
+  font-size: 20px;
+  width: 250px;
+  height: 70px;
+}
+
+
+
+/* ////////////////////////////////////// Hero section end */
+/* ////////////////////////////////////// Logo section start */
+
+
+.logos {
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 15px;
+  padding: 1em;
+}
+
+
+/* ////////////////////////////////////// Logo section  end */
+/* ////////////////////////////////////// Services section start */
+
+.services {
+  gap: 2em;
+}
+
+.services .card {
+  flex-direction: row;
+  border: 1px solid black;
+  box-shadow: 0 5px 0 #191A23;
+  border-radius: 20px;
+  background-color: #F3F3F3;
+  height: 310px;
+   padding: 50px;
+}
+
+.services .card .content {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.services .card .content,
+.services .card .icon {
+  width: 50%;
+ 
+}
+
+.services .card .content h3 {
+  background-color: var(--base-color);
+}
+
+
+.services .card .content button{
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background: transparent;
+}
+/* ////////////////////////////////////// Services section end */

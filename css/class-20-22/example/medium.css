@@ -39,7 +39,7 @@ header {
 /* ////////////////////////////////////// Hero section start */
 
 
-.hero {
+.hero, .services {
   flex-direction: column;
 }
 
@@ -50,3 +50,26 @@ header {
   align-items: center;
   margin-bottom: 3em;
 }
+
+
+.hero .content h1{
+  font-size: 40px;
+}
+
+/* ////////////////////////////////////// Hero section end */
+/* ////////////////////////////////////// Logo section start */
+
+.logos{
+   justify-content: center;
+}
+
+
+/* ////////////////////////////////////// Logo section end */
+/* ////////////////////////////////////// Services section start */
+
+.services .card{
+  width: 90%;
+}
+
+/* ////////////////////////////////////// Services section end */
+
