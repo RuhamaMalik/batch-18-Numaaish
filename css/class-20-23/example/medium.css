@@ -73,3 +73,22 @@ header {
 
 /* ////////////////////////////////////// Services section end */
 
+/* ////////////////////////////////////// Study section start */
+.studySec{
+  flex-direction: column;
+}
+
+
+
+.studySec .card {
+width: 80%;
+  border-right: none;
+  border-bottom: 1px solid gray;
+  height: 200px;
+}
+
+.studySec .card .content {
+  width: 80%;
+}
+/* ////////////////////////////////////// Study section end */
+

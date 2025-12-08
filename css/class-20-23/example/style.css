@@ -154,6 +154,7 @@ header {
 
 .services {
   gap: 2em;
+  flex-wrap: wrap;
 }
 
 .services .card {
@@ -163,7 +164,9 @@ header {
   border-radius: 20px;
   background-color: #F3F3F3;
   height: 310px;
-   padding: 50px;
+  padding: 50px;
+  width: 700px;
+  flex-shrink: 0;
 }
 
 .services .card .content {
@@ -177,7 +180,7 @@ header {
 .services .card .content,
 .services .card .icon {
   width: 50%;
- 
+
 }
 
 .services .card .content h3 {
@@ -185,7 +188,7 @@ header {
 }
 
 
-.services .card .content button{
+.services .card .content button {
   border: none;
   outline: none;
   display: flex;
@@ -193,4 +196,134 @@ header {
   gap: 1em;
   background: transparent;
 }
+
+.services .card2 {
+  background-color: var(--base-color);
+}
+
+.services .card2 .content h3,
+.services .card3 .content h3 {
+  background-color: #F3F3F3;
+}
+
+.services .card3 {
+  background-color: var(--dark);
+}
+
 /* ////////////////////////////////////// Services section end */
+/* ////////////////////////////////////// Study section start */
+
+.studySecHead {
+  text-align: center;
+  padding: 1.5em;
+  font-size: 60px;
+}
+
+.studySecHead span {
+  color: var(--base-color);
+}
+
+.studySec {
+  min-height: 326px;
+  background-color: var(--dark);
+  color: #F3F3F3;
+  border-radius: 40px;
+  padding: 1em;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+}
+
+.studySec .card {
+
+  height: 163px;
+  padding: 1em;
+  border-right: 1px solid gray;
+  flex-grow: 1;
+}
+
+.studySec .card .content {
+  width: 300px;
+  height: 163px;
+  margin: 0 auto;
+}
+
+.studySec .card .content a {
+  text-decoration: none;
+  color: var(--base-color);
+  padding-top: 20px;
+  display: block;
+}
+
+
+.studySec .card .content a:hover {
+  color: #666363;
+}
+
+/* ////////////////////////////////////// Study section end */
+/* ////////////////////////////////////// FaQ section start */
+
+.faqs{
+  min-height: 400px;
+  overflow: hidden;
+}
+.faq {
+  width: 80%;
+  height: 150px;
+  background-color: var(--base-color);
+  color: #F3F3F3;
+  border-radius: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  transition: height 0.2s ease-in-out;
+}
+
+.faq .que {
+  height: 150px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.faq .que span {
+  font-size: 60px;
+  width: 80px;
+
+}
+
+.faq .ans {
+  opacity: 0;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+}
+
+.faq:hover {
+  height: 300px;
+}
+
+.faq:hover .que {
+  border-bottom: 1px solid black;
+}
+
+.faq:hover .ans{
+opacity: 1;
+ height: 150px;
+}
+/* ////////////////////////////////////// FaQ section end */
+
+/* ////////////////////////////////////// Footer section start */
+
+footer{
+  height: 514px;
+  background-color: var(--dark);
+  border-radius: 40px 40px 0 0 ;
+  width: 100%;
+}
+/* ////////////////////////////////////// Footer section end */
