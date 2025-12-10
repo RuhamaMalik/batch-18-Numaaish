@@ -28,6 +28,10 @@ header {
   width: 100vw;
   background-color: var(--dark);
   color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
 }
 
@@ -132,7 +136,9 @@ header {
   height: 70px;
 }
 
-
+.hero {
+  padding-top: 70px;
+}
 
 /* ////////////////////////////////////// Hero section end */
 /* ////////////////////////////////////// Logo section start */
@@ -263,10 +269,11 @@ header {
 /* ////////////////////////////////////// Study section end */
 /* ////////////////////////////////////// FaQ section start */
 
-.faqs{
+.faqs {
   min-height: 400px;
   overflow: hidden;
 }
+
 .faq {
   width: 80%;
   height: 150px;
@@ -312,18 +319,141 @@ header {
   border-bottom: 1px solid black;
 }
 
-.faq:hover .ans{
-opacity: 1;
- height: 150px;
+.faq:hover .ans {
+  opacity: 1;
+  height: 150px;
 }
+
 /* ////////////////////////////////////// FaQ section end */
 
 /* ////////////////////////////////////// Footer section start */
 
-footer{
-  height: 514px;
+footer {
+  min-height: 514px;
   background-color: var(--dark);
-  border-radius: 40px 40px 0 0 ;
+  border-radius: 40px 40px 0 0;
   width: 100%;
+  padding: 60px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+footer .foot-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+footer .foot-head .tabs {
+  display: flex;
+  gap: 40px;
+}
+
+footer .foot-head .tabs a {
+  color: white;
+}
+
+footer .foot-head .icons i {
+  font-size: 30px;
+}
+
+
+footer .foot-body {
+  min-height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .foot-body .contact {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .foot-body .contact h3 {
+  width: 126px;
+  height: 26px;
+  background-color: var(--base-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark);
+
+}
+
+footer .foot-body .contact p {
+  font-size: 18px;
+}
+
+footer .foot-body .email {
+  width: 60%;
+  height: 184px;
+  background-color: #292A32;
+  border-radius: 20px;
+  padding: 58px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .foot-body .email button,
+footer .foot-body .email input {
+  width: 47%;
+  height: 68px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+footer .foot-body .email input {
+  border: 1px solid white;
+  color: white;
+   padding: 35px;
+}
+
+footer .foot-body .email button{
+  background-color: var(--base-color);
+}
+
+footer .foot-f {
+  height: 78px;
+  border-top: 1px solid white;
+  font-size: 18px;
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+}
+
+footer .foot-f a {
+  color: white;
+}
+
+@media only screen and (max-width:750px)  {
+  footer{
+  padding: 60px 30px;
+  }
+
+footer .foot-body .email{
+  padding: 20px;
+ }
+
+ footer .foot-body .email button{
+  font-size: 14px;
+ }
+
+ footer .foot-f{
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2em;
+  gap: 20px;
+ }
+}
+
 /* ////////////////////////////////////// Footer section end */

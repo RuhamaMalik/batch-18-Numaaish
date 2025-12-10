@@ -91,4 +91,28 @@ width: 80%;
   width: 80%;
 }
 /* ////////////////////////////////////// Study section end */
+/* ////////////////////////////////////// Footer section start */
+
+
+footer .foot-head, footer .foot-head .tabs , footer .foot-body{
+ flex-direction: column;
+ align-items: flex-start;
+
+}
+
+footer .foot-head, footer .foot-body .contact{
+  gap: 2em;
+}
+
+footer .foot-body{
+  align-items: center;
+  gap: 2em;
+  padding: 2em 0;
+}
+
+footer .foot-body .contact , footer .foot-body .email{
+  width: 100%;
+}
+
+/* ////////////////////////////////////// Footer section end */
 
