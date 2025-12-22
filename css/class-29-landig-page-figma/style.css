@@ -1,0 +1,16 @@
+*{
+ font-family: "Poppins", sans-serif !important;
+}
+
+.img{
+  width: 50% !important;
+}
+
+@media (max-width:992px){
+  .square{
+  border-radius: 0 !important;
+}
+.img{
+  width:auto !important;
+}
+}
