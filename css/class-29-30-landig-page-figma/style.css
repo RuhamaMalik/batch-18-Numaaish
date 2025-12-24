@@ -1,0 +1,27 @@
+* {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.img {
+  width: 50% !important;
+}
+
+.myBtn{
+  width:120px !important;
+}
+
+.myInput:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width:992px) {
+  .square {
+    border-radius: 0 !important;
+  }
+
+  .img {
+    width: auto !important;
+  }
+}
