@@ -16,6 +16,10 @@
   box-shadow: none;
 }
 
+.center-head{
+  width: 50%;
+}
+
 @media (max-width:992px) {
   .square {
     border-radius: 0 !important;
@@ -24,4 +28,9 @@
   .img {
     width: auto !important;
   }
+
+  .center-head{
+  width: 90%;
+}
+
 }
