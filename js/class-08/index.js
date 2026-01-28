@@ -137,7 +137,7 @@ if (number > 10) {
   console.log("Greater than 10!");
 } else if (number < 10) {
   console.log("Less than 10");
-} else if (number == 10) {
+} else if (number === 10) {
   console.log("Equals to 10");
 } else {
   console.log("Invalid Input");
