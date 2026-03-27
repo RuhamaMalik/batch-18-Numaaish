@@ -1,0 +1,9 @@
+.img{
+  width: 400px;
+  height: 300px;
+  box-shadow: 4px 4px 5px red;
+}
+
+.hide{
+  visibility: hidden;
+}
