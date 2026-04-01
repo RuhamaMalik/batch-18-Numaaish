@@ -31,7 +31,8 @@
 
 // const div = document.getElementById('div');
 
-// console.log(div.childNodes); // 11 - p5
+// console.log(div.childNodes); //
+// - p5
 
 // let count = 0;
 // for (var i = 0; i < div.childNodes.length; i++) {
