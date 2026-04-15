@@ -110,16 +110,47 @@
 
 
 
-function fetchData() {
-  try {
-    console.lg('Products');
-  } catch (err) {
-    console.log(err);
-  }finally{
-    console.log('ma sabky saath hun jese Loader');
-    
-  }
- 
-}
+// function fetchData() {
+//   try {
+//     console.lg('Products');
+//   } catch (err) {
+//     console.log(err);
+//   } finally {
+//     console.log('ma sabky saath hun jese Loader');
 
-fetchData() 
+//   }
+
+// }
+
+// fetchData()
+
+///////////////////// 
+
+// let sum =0; 
+
+// for (let i = 1; i < 10; i +=2) {
+//  sum +=i
+// }
+
+// console.log(sum);
+
+
+// try {
+//   let result = 10 / 0;
+//   if(result === Infinity){
+//     throw new Error('0 Q diya hai ')
+//   }
+
+// } catch (error) {
+//   console.log(error);
+// }
+
+
+// document.write(document.getElementById("abcd").innerHTML);
+
+
+// function test(){
+//   let input = document.getElementById('input');
+//   console.log(input.value);
+  
+// }
