@@ -25,11 +25,11 @@
 //  Iterator
 
 
-// let fruits = ["apple" , "mango" ,"banana", "orange" , "grapes"];
+let fruits = ["apple" , "mango" ,"banana", "orange" , "grapes"];
 
-// let iterator = fruits[Symbol.iterator]();
+let iterator = fruits[Symbol.iterator]();
 
-// // console.log(iterator);
+console.log(iterator);
 // let result = iterator.next(); // {value:undefined,done:true}
 
 // while(!result.done){
@@ -54,45 +54,45 @@
 
 //  Custom Iterator
 
-function customIterator(arr) {
-  return {
-    [Symbol.iterator]() {
-      let index = 0;
-      return {
-        next() {
-          if (index < arr.length) {
-            return {
-              value: arr[index++],
-              done: false
-            }
-          }
-          else {
-            return {
-              value: undefined,
-              done: true
-            }
-          }
-        }
-      }
-    }
-  }
+// function customIterator(arr) {
+//   return {
+//     [Symbol.iterator]() {
+//       let index = 0;
+//       return {
+//         next() {
+//           if (index < arr.length) {
+//             return {
+//               value: arr[index++],
+//               done: false
+//             }
+//           }
+//           else {
+//             return {
+//               value: undefined,
+//               done: true
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
 
-}
-
-
-let numbers = customIterator([1, 2, 3, 4, 5]);
-// let result = numbers[Symbol.iterator]();
+// }
 
 
+// let numbers = customIterator([1, 2, 3, 4, 5]);
+// // let result = numbers[Symbol.iterator]();
 
 
-for (ele of [1, 2, 3, 4, 5]) {
-  console.log(ele);
-}
 
-for (ele of numbers) {
-  console.log(ele);
-}
+
+// for (ele of [1, 2, 3, 4, 5]) {
+//   console.log(ele);
+// }
+
+// for (ele of numbers) {
+//   console.log(ele);
+// }
 
 
 
