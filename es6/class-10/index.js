@@ -72,7 +72,7 @@
 
 // let fruits = ["Apple" , "Mango" , "Banana"];
 
-// let result = fruits.join(" ");
+// let result = fruits.join("");
 
 // console.log(result);
 
