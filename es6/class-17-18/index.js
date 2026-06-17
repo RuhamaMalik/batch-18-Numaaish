@@ -133,3 +133,36 @@
 
 
  
+/////////////////////////////////// SET
+// let fruits = new Set();
+
+// fruits.add("Apple")
+// fruits.add("Apple")
+// fruits.add("Apple")
+// fruits.add("Apple")
+// fruits.add("Mango")
+// fruits.add("Banana")
+// fruits.add("Orange")
+
+// console.log(fruits);
+// console.log(fruits.has("apple")); // case-sensitive
+
+// fruits.delete('Banana')
+// console.log(fruits);
+
+//////////////////
+
+
+// let arr = [1,2,2,3,3,4,2,5];
+// // arr = new Set(arr);
+// arr = [...new Set(arr)]
+
+// console.log(arr[2]);
+
+function test (name='Guest'){
+console.log(name);
+}
+
+test('Ruhama')
+test()
+
