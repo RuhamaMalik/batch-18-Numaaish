@@ -1,0 +1,13 @@
+> tsc --init ----- generate tscofig.json
+> npm init ----- generate package.json > type: module , main ./dist/index.js
+
+- create directory (dist, src)
+
+- inside tsconfig file > unComment (rootDir, outDir)
+- target (es2016)
+- "module": "esnext"
+
+> tsc --- auto compile all ts file
+> tsc -w | tsc --watch ---- auto compile on watch mode like live server
+
+> connect js files in html
