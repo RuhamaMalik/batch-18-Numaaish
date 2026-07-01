@@ -51,19 +51,19 @@
 /////////////////////// short method
 
 class Person {
-private skills:string[] = [];
+  private skills: string[] = [];
   constructor(
     public name: string,
     private age: number,
     public nationality: string,
-    readonly address : string
-  ) {}
-  
+    readonly address: string
+  ) { }
+
 }
 
 
 
-let p1 = new Person('Fakiha', 10, 'pk','ABCD Street');
+let p1 = new Person('Fakiha', 10, 'pk', 'ABCD Street');
 p1.name = 'Hiba';
 
 // p1.skills.push('JavaScript','html','css');
