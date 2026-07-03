@@ -20,28 +20,79 @@
 // console.log(p1.getSkills());
 // console.log(p1);
 ///////////////// getter , setter
-class Person {
-    constructor(_id, _bloodGroup, accountBalance) {
+// class Person {
+//   constructor(
+//     private _id: number,
+//     private _bloodGroup: string,
+//     private accountBalance: number
+//   ) { }
+//   get id() {
+//     return this._id;
+//   }
+//   get bloodGroup() {
+//     return this._bloodGroup;
+//   }
+//   set bloodGroup(value: string) {
+//     if (!value) {
+//       throw Error("This is required!")
+//     }
+//     this._bloodGroup = value;
+//   }
+// }
+// let p1 = new Person(101, 'A+', 12345);
+// p1.bloodGroup = 'A';
+// console.log(p1.id);
+// console.log(p1);
+///////////////// Inheritance
+////  parent class / base class / super class
+////  child class / drived class / sub class
+class Product {
+    constructor(_id, _title, price) {
         this._id = _id;
-        this._bloodGroup = _bloodGroup;
-        this.accountBalance = accountBalance;
+        this._title = _title;
+        this.price = price;
     }
     get id() {
         return this._id;
     }
-    get bloodGroup() {
-        return this._bloodGroup;
+}
+class ElectronicProduct extends Product {
+    constructor(id, title, price, warranty, voltage, brand) {
+        super(id, title, price);
+        this.warranty = warranty;
+        this.voltage = voltage;
+        this.brand = brand;
     }
-    set bloodGroup(value) {
-        if (!value) {
-            throw Error("This is required!");
-        }
-        this._bloodGroup = value;
+    // getId() {
+    //   return this.id;
+    // }
+    get title() {
+        return this._title;
     }
 }
-let p1 = new Person(101, 'A+', 12345);
-p1.bloodGroup = 'A';
-console.log(p1.id);
-console.log(p1);
+let iron = new ElectronicProduct(1, 'iron-27N', 5000, '2 years', '220V', 'panasonic');
+console.log(iron.title);
 export {};
+//       child     <---     parent
+// class SkincareProd extends Product {
+//   constructor(
+//     _id: number,
+//     _title: string,
+//     price: number,
+//     public skinType: string,
+//     public shelfLife: string,
+//     public madeBy: string
+//   ) {
+//     super(_id,_title,price)
+//   }
+// }
+// let sunScreen = new SkincareProd(12,'SPF-60',2000, 'All skin type', '6 month', 'Organic traveller');
+// console.log(sunScreen);
+/////////////////////////////////////
+// let input = document.getElementById('_input')! as HTMLInputElement;
+// !  non-nullAssertionOperator  ;
+// function getData(e:any){
+// e.preventDefault();
+// console.log(input.value);
+// }
 //# sourceMappingURL=index.js.map
