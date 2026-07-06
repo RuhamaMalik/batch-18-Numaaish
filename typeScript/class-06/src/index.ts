@@ -105,7 +105,7 @@ class ElectronicProduct extends Product {
 
 }
 let iron = new ElectronicProduct(1, 'iron-27N', 5000, '2 years', '220V', 'panasonic');
-console.log(iron.title);
+// console.log(iron.title);
 
 
 //       child     <---     parent
@@ -145,3 +145,95 @@ console.log(iron.title);
 // }
 
 
+////////////////////////////// Abstraction
+
+// abstract class Animal {
+//   name: string;
+//   constructor(n: string) {
+//     this.name = n
+//   }
+
+//   eat(): void {
+//     console.log(`${this.name} khana kha raha hai`);
+//   }
+
+//   abstract makeSound(): void
+
+// }
+
+// // let test = new Animal('cat'); // error
+
+
+// class Cat extends Animal {
+
+//   constructor(n: string) {
+//     super(n)
+//   }
+
+//   makeSound(): void {
+//     console.log('Meow Meow!');
+//   }
+
+// }
+
+// class Dog extends Animal {
+
+//   constructor(n: string) {
+//     super(n)
+//   }
+
+//   makeSound(): void {
+//     console.log('Bhow Bhow!');
+//   }
+
+// }
+
+// let cat = new Cat('tom');
+// cat.makeSound();
+
+// let dog = new Dog('bob');
+// dog.makeSound();
+
+
+
+///////////////////////////////// Polymorphism
+
+abstract class Shape {
+  abstract getArea(): number;
+}
+
+class Circle extends Shape {
+
+  constructor(public radius: number) {
+    super();
+  }
+
+  getArea(): number {
+    return Math.PI * this.radius* this.radius;
+  }
+
+}
+
+
+class Square extends Shape{
+   constructor(public side: number) {
+    super();
+  }
+
+  getArea():number{
+    return this.side * this.side;
+  }
+
+}
+
+
+let c1 = new Circle(5);
+let sq1 = new Square(5);
+
+console.log(c1.getArea());
+console.log(sq1.getArea());
+
+
+/////// singleton
+/////// type casting 
+/////// Generics 

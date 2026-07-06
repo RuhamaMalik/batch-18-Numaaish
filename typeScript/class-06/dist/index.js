@@ -71,8 +71,7 @@ class ElectronicProduct extends Product {
     }
 }
 let iron = new ElectronicProduct(1, 'iron-27N', 5000, '2 years', '220V', 'panasonic');
-console.log(iron.title);
-export {};
+// console.log(iron.title);
 //       child     <---     parent
 // class SkincareProd extends Product {
 //   constructor(
@@ -95,4 +94,65 @@ export {};
 // e.preventDefault();
 // console.log(input.value);
 // }
+////////////////////////////// Abstraction
+// abstract class Animal {
+//   name: string;
+//   constructor(n: string) {
+//     this.name = n
+//   }
+//   eat(): void {
+//     console.log(`${this.name} khana kha raha hai`);
+//   }
+//   abstract makeSound(): void
+// }
+// // let test = new Animal('cat'); // error
+// class Cat extends Animal {
+//   constructor(n: string) {
+//     super(n)
+//   }
+//   makeSound(): void {
+//     console.log('Meow Meow!');
+//   }
+// }
+// class Dog extends Animal {
+//   constructor(n: string) {
+//     super(n)
+//   }
+//   makeSound(): void {
+//     console.log('Bhow Bhow!');
+//   }
+// }
+// let cat = new Cat('tom');
+// cat.makeSound();
+// let dog = new Dog('bob');
+// dog.makeSound();
+///////////////////////////////// Polymorphism
+class Shape {
+}
+class Circle extends Shape {
+    constructor(radius) {
+        super();
+        this.radius = radius;
+    }
+    getArea() {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+class Square extends Shape {
+    constructor(side) {
+        super();
+        this.side = side;
+    }
+    getArea() {
+        return this.side * this.side;
+    }
+}
+let c1 = new Circle(5);
+let sq1 = new Square(5);
+console.log(c1.getArea());
+console.log(sq1.getArea());
+export {};
+/////// singleton
+/////// type casting 
+/////// Generics 
 //# sourceMappingURL=index.js.map
