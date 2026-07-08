@@ -46,31 +46,33 @@
 ///////////////// Inheritance
 ////  parent class / base class / super class
 ////  child class / drived class / sub class
-class Product {
-    constructor(_id, _title, price) {
-        this._id = _id;
-        this._title = _title;
-        this.price = price;
-    }
-    get id() {
-        return this._id;
-    }
-}
-class ElectronicProduct extends Product {
-    constructor(id, title, price, warranty, voltage, brand) {
-        super(id, title, price);
-        this.warranty = warranty;
-        this.voltage = voltage;
-        this.brand = brand;
-    }
-    // getId() {
-    //   return this.id;
-    // }
-    get title() {
-        return this._title;
-    }
-}
-let iron = new ElectronicProduct(1, 'iron-27N', 5000, '2 years', '220V', 'panasonic');
+// class Product { // base class
+//   constructor(
+//     private _id: number,
+//     protected _title: string,
+//     public price: number
+//   ) { }
+//   get id() {
+//     return this._id;
+//   }
+// }
+// class ElectronicProduct extends Product {
+//   constructor(
+//     id: number,
+//     title: string,
+//     price: number,
+//     public warranty: string,
+//     public voltage: string,
+//     public brand: string
+//   ) { super(id, title, price) }
+//   // getId() {
+//   //   return this.id;
+//   // }
+//   get title() {
+//     return this._title;
+//   }
+// }
+// let iron = new ElectronicProduct(1, 'iron-27N', 5000, '2 years', '220V', 'panasonic');
 // console.log(iron.title);
 //       child     <---     parent
 // class SkincareProd extends Product {
@@ -149,10 +151,13 @@ class Square extends Shape {
 }
 let c1 = new Circle(5);
 let sq1 = new Square(5);
-console.log(c1.getArea());
-console.log(sq1.getArea());
+let students = {
+    type: 'A',
+    name: 'Asiya',
+    age: 10,
+    // nationality:'Pakistani'
+};
 export {};
-/////// singleton
-/////// type casting 
+/////// type casting
 /////// Generics 
 //# sourceMappingURL=index.js.map
