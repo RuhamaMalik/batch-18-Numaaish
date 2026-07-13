@@ -445,9 +445,104 @@
 
 // console.log(merge({name:'Fatima'},{destination:'CEO'}));
 
+//////////////////
 
 
-////////////////////// type Narrowing
+
+// function abcd<T extends object,U extends object, V extends string>(objA:T, objB:U, str:V) {
+//   console.log(str);
+//   return { ...objA, ...objB }
+// }
+
+
+// console.log(
+//   abcd(
+//     { name: 'Ruhama', nationality:'Pakistani', email:'ruhama@gmail.com' },
+//     { age: 10, skills: ['javaScript'], id:10  },
+//     'abcd'
+//   )
+// );
+
+
+
+// console.log(merge([1,2,3], ['a','b','c']));
+
+// console.log(merge('Ruhama', 'Gull'));
+
+
+////////////////////////////
+
+
+// function printArr<T>(arr: T[]) {
+
+//   arr.forEach((e) => {
+//     if (typeof e === 'number') {
+//       console.log(e.toFixed(2));
+//     }else if(typeof e === 'string'){
+//         console.log(e.toUpperCase());
+//     }
+//   })
+
+// }
+
+
+// printArr([1, 2, 3.56, 4, 5]);
+// printArr(['apple', 'mango', 'banana']);
+// printArr([{name:'Imama'}, {age:10}]);
+
+
+
+
+////////////////////// type Narrowing - Home work
+
+/////////////////////////// Decorators
+
+
+// function Deco(constructor: Function) {
+//   console.log('Hello Deco');
+// }
+// function Abcd(constructor: Function) {
+//   console.log('Hello Abcd');
+// }
+
+// @Deco
+// @Abcd
+// class Person{
+//   name:string = 'Ruhama';
+//   constructor(public id:number){}
+// }
+
+// @Deco
+// class Animal{
+//    name:string = 'cat';
+//   constructor(public id:number){}
+// }
+
+
+///////////////////////////////////////////
+
+
+function Deco(mesg:string) { // decorator factory
+  return function (constructor: Function) { // decorator
+    console.log(mesg);
+  }
+}
+
+@Deco('Hello Deco')
+class Person{
+  name:string = 'Sana';
+  constructor(){}
+}
+
+// ENUMS
+// TYPE GUARDS
+// FNCTION OVERLOADING
+
+
+
+
+
+
 
 
 
