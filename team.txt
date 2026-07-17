@@ -3,6 +3,7 @@ Team A
 Zara waheed
 Laraib zia ---- TH
 Khizra Muhammad Ikram
+Fatima Muhammad hUSSAIN
 
 Team B
 
@@ -67,6 +68,12 @@ Team L
 
 Mariyam Danish
 Muniza
+
+Team M
+
+Aqsa Khatak
+Afia FurQan ------ TH
+Umaima  Aslam
 
 
 
