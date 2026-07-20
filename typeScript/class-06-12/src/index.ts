@@ -574,6 +574,15 @@
 ///////////////////// Modules  ---- ESM modules (import / export)
 
 
+// import { fruits } from "../dist/common.js";
+
+import d,{fruits as f, sum} from './test.js';
+
+// console.log(fruits);
+// console.log(sum(5,'8'));
+
+console.log(d(8));
+console.log(f);
 
 
 
