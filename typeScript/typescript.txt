@@ -1,0 +1,29 @@
+type inference
+type annotation
+type aliases
+literal type
+union
+intersection
+tuples
+interface
+optional property
+
+OOPS- 4 pillars
+access modifiers
+// 1 - polymorphism
+// 2 - Abstraction
+// 3 - Inheritance
+// 4 - Encapsulation
+readonly
+getter / setter
+Singleton
+
+type casting
+type narrowing
+Modules
+Generics
+Decorators
+ENUMS
+TYPE GUARDS
+FUNCTION OVERLOADING
+
