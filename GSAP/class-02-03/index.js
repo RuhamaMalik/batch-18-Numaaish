@@ -3,7 +3,8 @@
 
 // let tl = gsap.timeline();
 
-// tl.from('h1',{
+
+// tl.from('h1',{ 
 //   opacity:0,
 //   x:450,
 //   duration:1
