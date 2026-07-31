@@ -33,7 +33,7 @@
 //////////////////////////////////////
 
 gsap.registerPlugin(TextPlugin)
-gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(ScrollTrigger)
 
 // let tl = gsap.timeline();
 
@@ -112,32 +112,32 @@ gsap.registerPlugin(ScrollTrigger)
 
 //////////////////////////// ScrollTrigger
 
-gsap.from('.card1',{
+gsap.from('.card1', {
   // scrollTrigger:'.container2',
-  scrollTrigger:{
-    trigger:'.card1',
+  scrollTrigger: {
+    trigger: '.card1',
     // markers:true,
-    start:'top 60%',
-    end:'top 20%',
+    start: 'top 60%',
+    end: 'top 20%',
     scrub: 2
   },
-  scale:0,
-  rotate:360,
+  scale: 0,
+  rotate: 360,
 
 
 })
 
-gsap.from('.card2',{
-  scrollTrigger:{
-    trigger:'.card2',
+gsap.from('.card2', {
+  scrollTrigger: {
+    trigger: '.card2',
     // markers:true,
-    start:'top 60%',
-    end:'top 20%',
+    start: 'top 60%',
+    end: 'top 20%',
     scrub: 2,
     // pin:true
   },
-  scale:0,
-  rotate:360,
+  scale: 0,
+  rotate: 360,
 
 
 })
@@ -157,33 +157,85 @@ gsap.from('.card2',{
 // })
 
 
-gsap.from('.card4',{
+gsap.from('.card4', {
   // scrollTrigger:'.container2',
-  scrollTrigger:{
-    trigger:'.card4',
+  scrollTrigger: {
+    trigger: '.card4',
     // markers:true,
-    start:'top 60%',
-    end:'top 20%',
+    start: 'top 60%',
+    end: 'top 20%',
     scrub: 2
   },
-  scale:0,
-  rotate:360,
+  scale: 0,
+  rotate: 360,
 
 
 })
 
 
 
-gsap.from('.service',{
-  scrollTrigger:{
-    trigger:'.service',
-    markers:true,
-    start:'top 50%',
-    end:'top 20%',
-    scrub:3
+gsap.from('.service', {
+  scrollTrigger: {
+    trigger: '.service',
+    markers: true,
+    start: 'top 50%',
+    end: 'top 20%',
+    scrub: 3
   },
-  opacity:0,
-  y:50,
-  duration:0.5,
-  stagger:0.5
+  opacity: 0,
+  y: 50,
+  duration: 0.5,
+  stagger: 0.5
 })
+
+
+// ///////////////////////////////////////
+
+let aboutTl = gsap.timeline(
+  {
+    scrollTrigger: {
+      trigger: '.aboutWrapper',
+      start: 'top 60%',
+      end: 'bottom 20%',
+      toggleActions: 'play  none reverse none'
+    }
+  }
+)
+
+aboutTl.from(
+  '.center', {
+  scale: 0,
+  opacity: 0,
+  duration: 1,
+  ease: "power1.in(1.5)",
+}
+)
+
+
+// let _x = [0, 190, 190, 0, -190, -190];
+// let _y = [-210, -110, 110, 210, 110, -110];
+
+
+let _x = [0, 240, 240, 0, -240, -240];
+let _y = [-260, -110, 140, 260, 140, -110];
+
+
+aboutTl.fromTo(
+  '.circle',
+  {
+    x: 0,
+    y: 0,
+    scale: 0,
+    opacity: 0
+  },
+  {
+    x: (index) => _x[index],
+    y: (index) => _y[index],
+    scale: 1,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2
+  }
+)
+
+

@@ -144,3 +144,65 @@ img{
 .service4 {
   background-color: rgb(74, 171, 52);
 }
+
+
+
+
+/* /////////////////////////////////// */
+
+.aboutWrapper{
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.aboutWrapper .about{
+  max-width: 1700px;
+  height:inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.aboutWrapper .about .center{
+  height:300px;
+  width:300px;
+  background-color: orange;
+   display: flex;
+   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+  padding:10px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px black ;
+position: relative;
+z-index: 2;
+}
+
+
+.circle{
+  background-color: rgb(16, 129, 131);
+  border: 2px solid rgb(194, 132, 16);
+  color: white;
+  padding: 20px;
+  width: 170px;
+  height: 170px;
+  font-size: 14px;
+  text-align: center;
+  flex-shrink: 0;
+  display: flex;
+   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+  z-index: 1;
+}
