@@ -2,8 +2,12 @@ import {
   auth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
+  sendEmailVerification,
+
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+
 } from "./firebase.config.js";
 
 
@@ -20,8 +24,14 @@ const signUp = async (e) => {
   try {
     let userCredential = await createUserWithEmailAndPassword(auth, email.value, password.value);
     const user = userCredential.user;
-    console.log(user);
-    window.location.replace('/home.html')
+
+    if (!userCredential.user.emailVerified) {
+      signOut(auth);
+      await sendEmailVerification(auth.currentUser);
+      alert('Please verify your Email!');
+    }
+
+    window.location.replace('/');
   } catch (error) {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -34,6 +44,11 @@ const signUp = async (e) => {
 document?.getElementById('signup')?.addEventListener('submit', signUp);
 
 
+
+// ///////////////////  SignIn   ////////////////////// 
+
+
+
 const signIn = async (e) => {
   e.preventDefault();
 
@@ -42,7 +57,15 @@ const signIn = async (e) => {
   try {
     let data = await signInWithEmailAndPassword(auth, email.value, password.value);
     console.log(data.user);
-    window.location.replace('/home.html')
+
+    if (!data.user.emailVerified) {
+      signOut(auth);
+      await sendEmailVerification(auth.currentUser);
+      alert('Please verify your Email!');
+    }
+
+    window.location.replace('/');
+
   } catch (error) {
     console.log(error);
   }
@@ -51,21 +74,31 @@ const signIn = async (e) => {
 document.getElementById('signin')?.addEventListener('submit', signIn);
 
 
-// //////////////////////////////// Google Auth
+////////////////////////////////// Google Auth
 
 const provider = new GoogleAuthProvider();
+
 provider.setCustomParameters({
   prompt: 'select_account'
 });
-const google = async ()=>{
-try {
- let result = await signInWithPopup(auth, provider);
-   const user = result.user;
-   console.log(user);
-   
-} catch (error) {
-  console.log(error.message);
-}
+
+const google = async () => {
+  try {
+    let result = await signInWithPopup(auth, provider);
+    const user = result.user;
+    window.location.replace('/');
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 
-document.getElementById('google')?.addEventListener('click', google )
+document.getElementById('google')?.addEventListener('click', google)
+
+
+// //////////////////////////// Signout
+
+const _singOut = () => {
+  signOut(auth)
+}
+
+document.getElementById('logout')?.addEventListener('click', _singOut)

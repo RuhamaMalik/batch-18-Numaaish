@@ -3,6 +3,8 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut ,
+  sendEmailVerification,
   
   GoogleAuthProvider,
   signInWithPopup
@@ -29,6 +31,8 @@ export {
   auth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut, 
+  sendEmailVerification,
 
   GoogleAuthProvider,
   signInWithPopup
