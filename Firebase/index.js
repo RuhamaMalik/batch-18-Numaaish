@@ -11,6 +11,9 @@ import {
   setDoc,
   doc,
   db,
+  serverTimestamp,
+  onAuthStateChanged,
+  getDoc,
 
 } from "./firebase.config.js";
 
@@ -32,25 +35,26 @@ const signUp = async (e) => {
     ////// register user
     let userCredential = await createUserWithEmailAndPassword(auth, email.value, password.value);
     const user = userCredential.user;
-    
+
 
     ////// save user in db
     await setDoc(doc(db, "users", user?.uid), {
-      name:name?.value,
-      contact:contact?.value,
-      country:country?.value,
-      role:'user',
-      isActive:true
+      name: name?.value,
+      contact: contact?.value,
+      country: country?.value,
+      role: 'user',
+      isActive: true,
+      timestamp: serverTimestamp()
     });
 
-    ////// send email verificatio link
-    // if (!user?.emailVerified) {
-    //   signOut(auth);
-    //   await sendEmailVerification(auth.currentUser);
-    //   alert('Please verify your Email!');
-    // }
+    //// send email verificatio link
+    if (!user?.emailVerified) {
+      signOut(auth);
+      await sendEmailVerification(auth.currentUser);
+      alert('Please verify your Email!');
+    }
 
-    // window.location.replace('/');
+    window.location.replace('/');
   } catch (error) {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -117,7 +121,8 @@ document.getElementById('google')?.addEventListener('click', google)
 // //////////////////////////// Signout
 
 const _singOut = () => {
-  signOut(auth)
+  signOut(auth);
+  localStorage.removeItem('user');
 }
 
 document.getElementById('logout')?.addEventListener('click', _singOut);
@@ -141,4 +146,40 @@ document.getElementById('fg-pswd')?.addEventListener('click', forgetPswd)
 
 
 
+/////////////////////////// get data
 
+
+onAuthStateChanged(auth, async (_user) => {
+  if (_user) {
+
+    ///// get user data from DB
+    const userRef = doc(db, "users", _user.uid);
+    const docSnap = await getDoc(userRef);
+
+    if (docSnap.exists()) {
+
+      let user = docSnap.data();
+      localStorage.setItem('user', JSON.stringify(user));
+
+      let name = document.getElementById('name');
+      let title = document.getElementById('title');
+      let contact = document.getElementById('contact');
+      let email = document.getElementById('email');
+      let country = document.getElementById('country');
+
+      name.value = user?.name;
+      contact.value = user?.contact || '293273233';
+      title.value = user?.title || 'Web Developer';
+      email.value = user?.email || 'email@gmail.com';
+      country.value = user?.country || 'e.g Pakistan';
+
+    } else {
+      console.log("User Not Found!");
+    }
+
+
+
+  } else {
+    console.log("No user is signed in.");
+  }
+});

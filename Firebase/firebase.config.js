@@ -4,6 +4,8 @@ import {
   getFirestore,
   doc,
   setDoc,
+  getDoc,
+  serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
 
@@ -16,7 +18,8 @@ import {
   sendPasswordResetEmail,
 
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-auth.js";
 
 
@@ -46,7 +49,10 @@ export {
   db,
   doc,
   setDoc,
+  serverTimestamp,
+  getDoc,
 
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  onAuthStateChanged
 }
