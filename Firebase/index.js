@@ -9,6 +9,7 @@ import {
   signInWithPopup,
   sendPasswordResetEmail,
   setDoc,
+  updateDoc,
   doc,
   db,
   serverTimestamp,
@@ -40,6 +41,7 @@ const signUp = async (e) => {
     ////// save user in db
     await setDoc(doc(db, "users", user?.uid), {
       name: name?.value,
+      email: email?.value,
       contact: contact?.value,
       country: country?.value,
       role: 'user',
@@ -143,10 +145,63 @@ const forgetPswd = async () => {
 document.getElementById('fg-pswd')?.addEventListener('click', forgetPswd)
 
 
+/////////////////////////////////// update data/profile
 
 
+const updateProf = async () => {
+  let name = document.getElementById('name');
+  let contact = document.getElementById('contact');
+  let country = document.getElementById('country');
+  let title = document.getElementById('title');
+
+  const data = {
+    name: name?.value,
+    contact: contact?.value,
+    country: country?.value,
+    title: title?.value
+  }
+  const uid = JSON.parse(localStorage.getItem('user')).uid;
+  try {
+    const userRef = doc(db, "users", uid);
+    await updateDoc(userRef, data);
+  } catch (error) {
+    console.log(error.message);
+  }
+
+}
+
+
+
+function toggleEdit() {
+  const inputs = document.querySelectorAll('.info-input');
+  const btn = document.getElementById('toggleBtn');
+  const isDisabled = inputs[0].disabled;
+  console.log(isDisabled);
+
+  inputs.forEach(input => {
+    input.disabled = !isDisabled;
+  });
+
+  if (isDisabled) {
+    btn.textContent = 'Save Profile';
+    btn.style.backgroundColor = '#10b981'; // Green color for Save
+    inputs[0].focus();
+  } else {
+    updateProf();
+    btn.textContent = 'Edit Profile';
+    btn.style.backgroundColor = '#4f46e5'; // Blue color for Edit
+  }
+}
+
+document.getElementById('toggleBtn').addEventListener('click', toggleEdit)
 
 /////////////////////////// get data
+
+
+
+
+
+
 
 
 onAuthStateChanged(auth, async (_user) => {
@@ -159,7 +214,7 @@ onAuthStateChanged(auth, async (_user) => {
     if (docSnap.exists()) {
 
       let user = docSnap.data();
-      localStorage.setItem('user', JSON.stringify(user));
+      localStorage.setItem('user', JSON.stringify({ ...user, uid: _user.uid }));
 
       let name = document.getElementById('name');
       let title = document.getElementById('title');
@@ -167,11 +222,14 @@ onAuthStateChanged(auth, async (_user) => {
       let email = document.getElementById('email');
       let country = document.getElementById('country');
 
-      name.value = user?.name;
-      contact.value = user?.contact || '293273233';
-      title.value = user?.title || 'Web Developer';
-      email.value = user?.email || 'email@gmail.com';
-      country.value = user?.country || 'e.g Pakistan';
+      if (name || contact || title || email || country) {
+        name.value = user?.name;
+        contact.value = user?.contact || '293273233';
+        title.value = user?.title || 'Web Developer';
+        email.value = user?.email || 'email@gmail.com';
+        country.value = user?.country || 'e.g Pakistan';
+      }
+
 
     } else {
       console.log("User Not Found!");

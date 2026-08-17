@@ -5,6 +5,7 @@ import {
   doc,
   setDoc,
   getDoc,
+  updateDoc,
   serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
@@ -51,6 +52,7 @@ export {
   setDoc,
   serverTimestamp,
   getDoc,
+  updateDoc,
 
   GoogleAuthProvider,
   signInWithPopup,

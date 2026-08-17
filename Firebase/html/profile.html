@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ur">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,65 +107,69 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="card">
         <div class="card-header"></div>
-        <img src="https://cdn.vectorstock.com/i/500p/94/54/starry-shirt-girl-cartoon-avatar-vector-61679454.jpg" alt="User Image" class="profile-img">
+        <img src="https://cdn.vectorstock.com/i/500p/94/54/starry-shirt-girl-cartoon-avatar-vector-61679454.jpg"
+            alt="User Image" class="profile-img">
 
         <div class="info-container">
             <div class="info-group">
-                <label  class="info-label">Full Name</label>
-                <input id="name" type="text" class="info-input"  disabled>
+                <label class="info-label">Full Name</label>
+                <input id="name" type="text" class="info-input" disabled>
             </div>
 
             <div class="info-group">
                 <label class="info-label">Title</label>
-                <input id="title" type="text" class="info-input"  disabled>
+                <input id="title" type="text" class="info-input" disabled>
             </div>
 
             <div class="info-group">
                 <label class="info-label">Email</label>
-                <input id="email" type="email" class="info-input"  disabled>
+                <input id="email" type="email" class="info-input" disabled>
             </div>
 
             <div class="info-group">
                 <label class="info-label">Contact Number</label>
-                <input id="contact" type="tel" class="info-input"  disabled>
+                <input id="contact" type="tel" class="info-input" disabled>
             </div>
 
             <div class="info-group">
                 <label class="info-label">Location</label>
-                <input id="country" type="text" class="info-input"  disabled>
+                <input id="country" type="text" class="info-input" disabled>
             </div>
 
-            <button type="button" class="btn" id="toggleBtn" onclick="toggleEdit()">Edit Profile</button>
+            <button type="button" class="btn" id="toggleBtn">Edit Profile</button>
         </div>
     </div>
 
-    <script>
-        function toggleEdit() {
-            const inputs = document.querySelectorAll('.info-input');
-            const btn = document.getElementById('toggleBtn');
-            const isDisabled = inputs[0].disabled;
-
-            inputs.forEach(input => {
-                input.disabled = !isDisabled;
-            });
-
-            if (isDisabled) {
-                btn.textContent = 'Save Profile';
-                btn.style.backgroundColor = '#10b981'; // Green color for Save
-                inputs[0].focus();
-            } else {
-                btn.textContent = 'Edit Profile';
-                btn.style.backgroundColor = '#4f46e5'; // Blue color for Edit
-            }
+    <!-- <style>
+        .bulb {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
         }
-    </script>
+    </style>
+    <div id="bulb" class="bulb"></div>
+    <button id="switch">SWITCH</button>
+
+    <script>
+        let on = true;
+        document.getElementById('switch').addEventListener('click', () => {
+            let bulb = document.getElementById('bulb');
+            on = !on
+            if (!on) {
+                bulb.style.backgroundColor = 'yellow';
+            } else {
+                bulb.style.backgroundColor = 'green';
+            }
+        })
+    </script> -->
 
 
-
-<script type="module"  src="../index.js" ></script>
+    <script type="module" src="../index.js"></script>
 </body>
+
 </html>
