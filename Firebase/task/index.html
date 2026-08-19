@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blogging Platform</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="dark-mode">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Dev<span>Blogs</span></div>
+    <div class="nav-controls">
+      <input type="text" id="searchInput" placeholder="Search by title, author, keyword..." />
+      <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Tech">Tech</option>
+        <option value="Health">Health</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+      </select>
+      <button id="themeToggleBtn" class="btn">☀️ / 🌙</button>
+      <a href="my-bookmarks.html" class="btn">Bookmarks</a>
+      <button id="openAuthBtn" class="btn">Login</button>
+      <button id="openCreateModalBtn" class="btn btn-primary" style="display:none;">+ Add Blog</button>
+      <button id="logoutBtn" class="btn btn-danger" style="display:none;">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Share Knowledge, Inspire World</h1>
+    <p>Read and write blogs seamlessly with image uploads & realtime features.</p>
+  </header>
+
+  <!-- Main Blogs Container -->
+  <main class="container">
+    <div id="blogsContainer" class="blogs-grid">
+      <p class="loading">Loading Blogs...</p>
+    </div>
+  </main>
+
+  <!-- Auth Modal (Login/Signup/Forgot Password) -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeAuthModal">&times;</span>
+      <h2 id="authTitle">Login</h2>
+      <form id="authForm">
+        <input type="email" id="authEmail" placeholder="Email Address" required />
+        <input type="password" id="authPassword" placeholder="Password" required />
+        <button type="submit" id="authSubmitBtn" class="btn btn-primary">Sign In</button>
+      </form>
+      <button id="googleAuthBtn" class="btn btn-google">Sign in with Google</button>
+      <div class="auth-links">
+        <a href="#" id="toggleAuthMode">Don't have an account? Sign Up</a> | 
+        <a href="#" id="forgotPassLink">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create / Edit Blog Modal -->
+  <div id="blogModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeBlogModal">&times;</span>
+      <h2 id="blogModalTitle">Create Blog Post</h2>
+      <form id="blogForm">
+        <input type="hidden" id="blogId" />
+        <input type="text" id="postTitle" placeholder="Blog Title" required />
+        <select id="postCategory" required>
+          <option value="Tech">Tech</option>
+          <option value="Health">Health</option>
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+        </select>
+        <label>Upload Cover Image:</label>
+        <input type="file" id="postImage" accept="image/*" />
+        <textarea id="postContent" rows="6" placeholder="Write full content here..." required></textarea>
+        <button type="submit" id="saveBlogBtn" class="btn btn-primary">Publish</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
