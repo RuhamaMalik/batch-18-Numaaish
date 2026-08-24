@@ -89,7 +89,7 @@ const signIn = async (e) => {
       alert('Please verify your Email!');
     }
 
-    window.location.replace('/');
+    // window.location.replace('/');
 
   } catch (error) {
     console.log(error);
@@ -125,6 +125,7 @@ document.getElementById('google')?.addEventListener('click', google)
 const _singOut = () => {
   signOut(auth);
   localStorage.removeItem('user');
+  window.location.href = '/';
 }
 
 document.getElementById('logout')?.addEventListener('click', _singOut);
@@ -193,7 +194,7 @@ function toggleEdit() {
   }
 }
 
-document.getElementById('toggleBtn').addEventListener('click', toggleEdit)
+document.getElementById('toggleBtn')?.addEventListener('click', toggleEdit)
 
 /////////////////////////// get data
 
@@ -222,13 +223,24 @@ onAuthStateChanged(auth, async (_user) => {
       let email = document.getElementById('email');
       let country = document.getElementById('country');
 
-      if (name || contact || title || email || country) {
-        name.value = user?.name;
-        contact.value = user?.contact || '293273233';
-        title.value = user?.title || 'Web Developer';
-        email.value = user?.email || 'email@gmail.com';
-        country.value = user?.country || 'e.g Pakistan';
-      }
+      
+      if (name) name.value = user?.name;
+      if (contact) contact.value = user?.contact || '293273233';
+      if (title) title.value = user?.title || 'Web Developer';
+      if (email) email.value = user?.email || 'email@gmail.com';
+      if(country) country.value = user?.country || 'e.g Pakistan';
+
+      // let currentLoc = window.location.pathname;
+
+
+
+      // if (user.role === 'admin'   && currentLoc !== '/html/admin.html') {
+      //     window.location.href = '/html/admin.html';
+      // }else  if (user.role === 'user'   && currentLoc !== '/html/profile.html') {
+      //     window.location.href = '/html/profile.html';
+      // }
+     
+     
 
 
     } else {
