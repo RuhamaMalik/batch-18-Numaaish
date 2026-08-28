@@ -89,7 +89,7 @@ const signIn = async (e) => {
       alert('Please verify your Email!');
     }
 
-    // window.location.replace('/');
+    window.location.replace('/');
 
   } catch (error) {
     console.log(error);
@@ -149,20 +149,48 @@ document.getElementById('fg-pswd')?.addEventListener('click', forgetPswd)
 /////////////////////////////////// update data/profile
 
 
+let uploadImg = async (file) => {
+  let cloudName = 'docmtwzxm';
+  let uploadPreset = 'abcd1234';
+
+  let formData = new FormData();
+  formData.append("file", file);
+  formData.append("upload_preset", uploadPreset);
+
+  let res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+    method: 'POST',
+    body: formData
+  })
+
+  const data = await res.json();
+  console.log(data.secure_url);
+
+  return data.secure_url
+
+
+}
+
+
 const updateProf = async () => {
+  let image = document.getElementById('img');
   let name = document.getElementById('name');
   let contact = document.getElementById('contact');
   let country = document.getElementById('country');
   let title = document.getElementById('title');
 
-  const data = {
-    name: name?.value,
-    contact: contact?.value,
-    country: country?.value,
-    title: title?.value
-  }
-  const uid = JSON.parse(localStorage.getItem('user')).uid;
   try {
+
+   let url= await uploadImg(image.files[0]);
+
+    const data = {
+      name: name?.value,
+      contact: contact?.value,
+      country: country?.value,
+      title: title?.value,
+      profileImg:url
+    }
+    const uid = JSON.parse(localStorage.getItem('user')).uid;
+
     const userRef = doc(db, "users", uid);
     await updateDoc(userRef, data);
   } catch (error) {
@@ -217,39 +245,36 @@ onAuthStateChanged(auth, async (_user) => {
       let user = docSnap.data();
       localStorage.setItem('user', JSON.stringify({ ...user, uid: _user.uid }));
 
+      let image = document.getElementById('dp');
       let name = document.getElementById('name');
       let title = document.getElementById('title');
       let contact = document.getElementById('contact');
       let email = document.getElementById('email');
       let country = document.getElementById('country');
 
-      
+
+      if (image) image.src = user?.profileImg;
       if (name) name.value = user?.name;
       if (contact) contact.value = user?.contact || '293273233';
       if (title) title.value = user?.title || 'Web Developer';
       if (email) email.value = user?.email || 'email@gmail.com';
-      if(country) country.value = user?.country || 'e.g Pakistan';
-
-      // let currentLoc = window.location.pathname;
-
-
-
-      // if (user.role === 'admin'   && currentLoc !== '/html/admin.html') {
-      //     window.location.href = '/html/admin.html';
-      // }else  if (user.role === 'user'   && currentLoc !== '/html/profile.html') {
-      //     window.location.href = '/html/profile.html';
-      // }
-     
-     
-
+      if (country) country.value = user?.country || 'e.g Pakistan';
 
     } else {
       console.log("User Not Found!");
     }
 
 
-
   } else {
     console.log("No user is signed in.");
+
+    if (
+      window.location.pathname === '/html/user/profile.html'
+      || window.location.pathname === '/html/user/myorders.html'
+
+    ) {
+      window.location.replace('/')
+    }
+
   }
 });

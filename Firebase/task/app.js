@@ -110,8 +110,24 @@ if (forgotPassLink) {
 const logoutBtn = document.getElementById("logoutBtn");
 if (logoutBtn) logoutBtn.onclick = () => signOut(auth);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // --- Cloudinary Image Upload Helper ---
 async function uploadToCloudinary(file) {
+
   const formData = new FormData();
   formData.append("file", file);
   formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
@@ -119,7 +135,23 @@ async function uploadToCloudinary(file) {
   const res = await fetch(CLOUDINARY_URL, { method: "POST", body: formData });
   const data = await res.json();
   return data.secure_url;
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // --- Create/Edit Blog ---
 const blogModal = document.getElementById("blogModal");
