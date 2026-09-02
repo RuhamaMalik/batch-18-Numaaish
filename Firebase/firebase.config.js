@@ -7,6 +7,8 @@ import {
   getDoc,
   updateDoc,
   serverTimestamp,
+   collection,
+    getDocs
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
 
@@ -53,7 +55,9 @@ export {
   serverTimestamp,
   getDoc,
   updateDoc,
-
+   collection,
+    getDocs,
+    
   GoogleAuthProvider,
   signInWithPopup,
   onAuthStateChanged
