@@ -8,7 +8,8 @@ import {
   updateDoc,
   serverTimestamp,
    collection,
-    getDocs
+    getDocs,
+      onSnapshot 
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
 
@@ -57,6 +58,7 @@ export {
   updateDoc,
    collection,
     getDocs,
+    onSnapshot,
     
   GoogleAuthProvider,
   signInWithPopup,
