@@ -7,9 +7,11 @@ import {
   getDoc,
   updateDoc,
   serverTimestamp,
-   collection,
-    getDocs,
-      onSnapshot 
+  collection,
+  getDocs,
+  onSnapshot,
+  deleteDoc
+  , query, where,or,and, orderBy, limit
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
 
@@ -56,11 +58,12 @@ export {
   serverTimestamp,
   getDoc,
   updateDoc,
-   collection,
-    getDocs,
-    onSnapshot,
-    
+  collection,
+  getDocs,
+  onSnapshot,
+  deleteDoc,or, orderBy, limit,
+
   GoogleAuthProvider,
   signInWithPopup,
-  onAuthStateChanged
+  onAuthStateChanged, query, where,and,
 }

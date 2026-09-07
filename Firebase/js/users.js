@@ -1,4 +1,5 @@
-import { collection, getDocs, db, onSnapshot, doc, updateDoc } from "../firebase.config.js";
+import { collection, getDocs, db, onSnapshot, doc, updateDoc, deleteDoc, query, where, or, and, orderBy } from "../firebase.config.js";
+
 
 let getUser = async () => {
     try {
@@ -11,11 +12,47 @@ let getUser = async () => {
 
 
 
-        //////////////////// get real time update
+        // //////////////////// get all users real time update
 
-        let userRef = collection(db, "users")
+        // let userRef = collection(db, "users")
 
-        onSnapshot(userRef, (querySnapshot) => {
+        // onSnapshot(userRef, (querySnapshot) => {
+        //     const _users = [];
+        //     querySnapshot.forEach((doc) => {
+        //         _users.push({ ...doc.data(), id: doc.id });
+        //     });
+
+        //     users = _users
+        //     filteredUsers = [...users]
+        //     renderTable();
+        // });
+
+
+
+
+
+
+
+ //////////////////// simple and compound queries ////////////////////
+
+        let userRef = collection(db, "users");
+
+    //   let q =  query(userRef,  where("role", "!=", 'admin'))
+    //   let q =  query(userRef,  where("country", "array-contains","China"))
+    //   let q =  query(userRef,  where("skills", "array-contains-any", ['firebase',"js"]))
+    //   let q =  query(userRef,  where("country", "in", ["China","Pakistan"]))
+      let q =  query(userRef,  where("country", "in", ["China","Pakistan"]),orderBy('email','desc'))
+
+
+    //   let q =  query(userRef,   or(where('isActive', '==', true),
+    //  where('country', '==', 'Pakistan') ))
+
+
+    //   let q =  query(userRef,   and(where('isActive', '==', true),
+    //  where('country', '==', 'Pakistan') ))
+
+    
+        onSnapshot(q, (querySnapshot) => {
             const _users = [];
             querySnapshot.forEach((doc) => {
                 _users.push({ ...doc.data(), id: doc.id });
@@ -25,22 +62,28 @@ let getUser = async () => {
             filteredUsers = [...users]
             renderTable();
         });
+
+
+
+
+
+
+
     } catch (error) {
         console.log(error.message);
 
     }
 }
 
+
 /////////////////////////// Update Status start/////////////////////////////
 
 let updateStatus = async (uid, currentStatus) => {
     try {
         let status = currentStatus === 'true' || currentStatus === true
-
         await updateDoc(doc(db, "users", uid), {
             isActive: !status
         });
-
 
     } catch (error) {
         console.log(error.message);
@@ -49,6 +92,17 @@ let updateStatus = async (uid, currentStatus) => {
 }
 
 /////////////////////////// Update Status end/////////////////////////////
+/////////////////////////// Delete User start/////////////////////////////
+
+let deleteUser = async (uid) => {
+    try {
+        await deleteDoc(doc(db, "users", uid));
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+/////////////////////////// Delete User end/////////////////////////////
 
 
 
@@ -64,8 +118,10 @@ let updateStatus = async (uid, currentStatus) => {
 //   { id: 8, name: "Omer Farooq", email: "omer@example.com", role: "User", status: "Inactive" }
 // ];
 
+
+
 let currentPage = 1;
-const rowsPerPage = 1;
+const rowsPerPage = 3;
 let users = [];
 let filteredUsers = [...users];
 
@@ -83,6 +139,11 @@ tableBody.addEventListener('click', (e) => {
         let id = e.target.getAttribute('data-id');
         let currentStatus = e.target.getAttribute('currentStatus');
         updateStatus(id, currentStatus);
+    }
+
+    if (e.target.classList.contains('delete-btn')) {
+        let id = e.target.getAttribute('data-id');
+        deleteUser(id);
     }
 })
 
@@ -108,7 +169,8 @@ function renderTable() {
           <td>${user.email}</td>
           <td>${user.role}</td>
           <td><span class="status ${user?.status?.toLowerCase()}">${user.isActive ? 'Active' : 'Blocked'}</span></td>
-          <td><button id="sBtn" data-id="${user.id}" currentStatus="${user.isActive}" class=" status-btn   status ${user?.status?.toLowerCase()}">update status</button></td>
+          <td><button id="sBtn" data-id="${user.id}" currentStatus="${user.isActive}" class=" status-btn   status ">update status</button>
+         <button id="dBtn" data-id="${user.id}" class=" delete-btn status ">Delete</button></td>
         `;
         tableBody.appendChild(row);
     });
