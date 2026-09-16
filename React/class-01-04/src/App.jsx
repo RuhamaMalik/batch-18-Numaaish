@@ -1,6 +1,10 @@
 // import React from "react";
 
-import Card from "./components/Card";
+import Main from "./styling/Main";
+
+// import Cart from "./components/Cart";
+// import Card from "./components/Card";
+// import Counter from "./components/Counter";
 
 // import React from "react";
 // import Button from "./components/Button";
@@ -124,22 +128,34 @@ import Card from "./components/Card";
 
 const App = () => {
 
-  let data = {
-    title: "Shoes",
-    price: 100,
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-  };
+  // let data = {
+  //   title: "Shoes",
+  //   price: 100,
+  //   desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+  // };
 
   return (
     <>
       {/* <Card product={data} isActive={true} /> */}
 
       {/* <Card {...data} isActive={true} /> */}
-      <Card {...{...data, isActive:true}}  />
+      {/* <Card {...{...data, isActive:true}}  />
       <Card />
       <Card />
       <Card />
-      <Card />
+      <Card /> */}
+
+      {/* <Cart /> */}
+
+
+
+      {/* <Counter /> */}
+
+
+
+<Main />
+
+
     </>
   );
 };

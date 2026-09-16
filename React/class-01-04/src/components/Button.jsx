@@ -2,7 +2,7 @@ import React from "react";
 
 // const Button = (props) => {
 const Button = ({myTitle,second}) => {
-
+myTitle = 'ABCDEFG'
 // console.log(props);
 
 
