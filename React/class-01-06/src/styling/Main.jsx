@@ -14,7 +14,7 @@ const Main = () => {
     <MyButton isIcon={true} iconClass='fa-solid fa-magnifying-glass'  isIconBg={true} />
     <MyButton bgColor='bg-success'  iconClass='fa-solid fa-magnifying-glass'  /> */}
 
-      <img width={500} src="/images/glob.avif" alt="glob" />
+      {/* <img width={500} src="/images/glob.avif" alt="glob" />
       <img width={500} src={NextImg} alt="Next Js" />
       <img width={500} src='https://5.imimg.com/data5/ANDROID/Default/2022/9/JY/RK/YT/113217191/product-jpeg-500x500.jpg' alt="Next Js" />
       <PCard>
@@ -36,7 +36,7 @@ const Main = () => {
 
       <Hero />
       <About />
-      <Contact />
+      <Contact /> */}
     </>
   );
 };

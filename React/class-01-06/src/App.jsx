@@ -1,6 +1,8 @@
 // import React from "react";
 
-import Main from "./styling/Main";
+import Main from "./components/hook/Main";
+
+// import Main from "./styling/Main";
 
 // import Cart from "./components/Cart";
 // import Card from "./components/Card";
@@ -153,8 +155,9 @@ const App = () => {
 
 
 
-<Main />
+{/* <Main /> */}
 
+<Main />
 
     </>
   );
