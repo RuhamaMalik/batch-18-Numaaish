@@ -27,31 +27,74 @@ import { useEffect, useState } from "react";
 
 // export default UseEffectHook;
 
-const UseEffectHook = () => {
-  let [products, setProducts] = useState([]);
+// const UseEffectHook = () => {
+//   let [products, setProducts] = useState([]);
 
-  let getData = async () => {
-    let res = await fetch("https://dummyjson.com/products");
-    let data = await res.json();
-    setProducts(data.products);
-    return;
-  };
+//   let getData = async () => {
+//     let res = await fetch("https://dummyjson.com/products");
+//     let data = await res.json();
+//     setProducts(data.products);
+//     return;
+//   };
+
+//   useEffect(() => {
+//     getData();
+
+//   }, []);
+
+//   console.log(products);
+
+//   return (
+//     <>
+//       {products?.map((product, i) => (
+//         <div key={product?.id + i}>
+//           <h1> {product?.title}</h1>
+//           <p>{product.description}</p>
+//           <hr />
+//         </div>
+//       ))}
+//     </>
+//   );
+// };
+
+// export default UseEffectHook;
+
+// const UseEffectHook = () => {
+
+//   let [count, setCount] = useState(0);
+
+//   useEffect(() => {
+//     const intervalid = setInterval(() => {
+//       setCount((prev) => prev + 1);
+//     }, 1000);
+
+//     return () => {
+//       clearInterval(intervalid);
+//     };
+//   }, []);
+
+//   return <h1>Time : {count}</h1>;
+// };
+
+// export default UseEffectHook;
+
+const UseEffectHook = () => {
+  let [width, setWidth] = useState(0);
+
+  let handleResize = () => setWidth(window.innerWidth);
 
   useEffect(() => {
-    getData();
-  }, []);
+    window.addEventListener("resize", handleResize);
 
-  console.log(products);
+
+    return ()=>{
+    window.removeEventListener('resize',handleResize)
+    }
+  }, []);
 
   return (
     <>
-      {products?.map((product, i) => (
-        <div key={product?.id + i}>
-          <h1> {product?.title}</h1>
-          <p>{product.description}</p>
-          <hr />
-        </div>
-      ))}
+      <h1>Width : {width}</h1>
     </>
   );
 };
