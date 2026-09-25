@@ -1,6 +1,8 @@
 // import React from "react";
 
-import Main from "./components/hook/Main";
+import Main from "./components/classs-08/Main";
+
+// import Main from "./components/hook/Main";
 
 // import Main from "./styling/Main";
 
@@ -129,7 +131,6 @@ import Main from "./components/hook/Main";
 // /////////////////////////////
 
 const App = () => {
-
   // let data = {
   //   title: "Shoes",
   //   price: 100,
@@ -149,16 +150,13 @@ const App = () => {
 
       {/* <Cart /> */}
 
-
-
       {/* <Counter /> */}
 
+      {/* <Main /> */}
 
+      {/* <Main /> */}
 
-{/* <Main /> */}
-
-<Main />
-
+      <Main />
     </>
   );
 };
