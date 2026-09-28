@@ -1,6 +1,8 @@
 // import React from "react";
 
-import Main from "./components/classs-08/Main";
+import Main from "./pages/routing/Main";
+
+// import Main from "./components/classs-08/Main";
 
 // import Main from "./components/hook/Main";
 
