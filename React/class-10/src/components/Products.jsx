@@ -1,22 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Products = () => {
-   let [products, setProducts] = useState([]);
-
-  let getData = async () => {
-    let res = await fetch("https://dummyjson.com/products");
-    let data = await res.json();
-    setProducts(data.products);
-    return;
-  };
-
-  useEffect(() => {
-    getData();
-
-  }, []);
-
-
+ const {products} =useLoaderData();
   return (
     <>
       {products?.map((product, i) => (
