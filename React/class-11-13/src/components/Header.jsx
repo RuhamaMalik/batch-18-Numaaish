@@ -1,4 +1,3 @@
-import { Link, NavLink } from "react-router-dom";
 import {
   Navbar,
   NavbarBrand,
@@ -6,10 +5,11 @@ import {
   NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
+import ThemePallate from "./ThemePallate";
 const Header = () => {
   return (
     <>
- <Navbar fluid rounded>
+      <Navbar fluid rounded>
         <NavbarBrand>
           <img
             src="/favicon.svg"
@@ -31,29 +31,7 @@ const Header = () => {
           <NavbarLink href="#">Contact</NavbarLink>
         </NavbarCollapse>
       </Navbar>
-
-
-      {/* <h1>MY_Header</h1>
-      <Link className="link" to="/">
-        Home
-      </Link>{" "}
-      <br />
-      <br />
-      <Link className="link" to="/about">
-        About
-      </Link>
-      <br />
-      <br />
-      <Link className="link" to="/products">
-        Products
-      </Link>
-      <br />
-      <br />
-      <NavLink className={({isActive})=> isActive ?  'active' : 'link'} to="/contact">
-        Contact
-      </NavLink>
-      <br />
-      <br /> */}
+<ThemePallate />
     </>
   );
 };
