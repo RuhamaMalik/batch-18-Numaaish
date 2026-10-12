@@ -1,15 +1,22 @@
 import {
   Navbar,
   NavbarBrand,
-  NavbarCollapse,
+  NavbarCollapse, 
   NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
 import ThemePallate from "./ThemePallate";
+import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeProvider";
+
+
 const Header = () => {
+    const {currentStyle} = useContext(ThemeContext);
+  
   return (
     <>
-      <Navbar fluid rounded>
+      <Navbar style={{backgroundColor:currentStyle?.prop?.bgdark}}  fluid rounded>
         <NavbarBrand>
           <img
             src="/favicon.svg"
@@ -22,13 +29,11 @@ const Header = () => {
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>
-          <NavbarLink href="#" active>
+          <NavbarLink as={NavLink} to="/" active>
             Home
           </NavbarLink>
-          <NavbarLink href="#">About</NavbarLink>
-          <NavbarLink href="#">Services</NavbarLink>
-          <NavbarLink href="#">Pricing</NavbarLink>
-          <NavbarLink href="#">Contact</NavbarLink>
+          <NavbarLink   as={Link} to="/about"    >About</NavbarLink>
+          <NavbarLink as={NavLink} to="/contact">Contact</NavbarLink>
         </NavbarCollapse>
       </Navbar>
 <ThemePallate />

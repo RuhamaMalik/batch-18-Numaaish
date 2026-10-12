@@ -12,6 +12,9 @@ export const styles = {
     },
     dark: {
         theme: 'dark',
+        prop:{
+            bgdark:'black'
+        },
         base: {
             backgroundColor: 'black',
             color: 'white'
@@ -23,6 +26,9 @@ export const styles = {
     },
     purple: {
         theme: 'purple',
+        prop:{
+            bgdark:'#5c3fab'
+        },
         base: {
             backgroundColor: '#ad92f7',
             color: 'white'
@@ -34,6 +40,9 @@ export const styles = {
     },
     red: {
         theme: 'red',
+          prop:{
+            bgdark:'#b31d0c'
+        },
         base: {
             backgroundColor: '#f58478',
             color: 'white'

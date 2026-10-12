@@ -6,7 +6,6 @@ export const ThemeContext = createContext();
 const ThemeProvider = ({ children }) => {
   let [theme, setTheme] = useState("purple");
   let currentStyle = styles[theme];
-  console.log("testtttttttttttttttttttttt : " , styles[theme]);
   
   return <ThemeContext.Provider value={{theme,setTheme,currentStyle}}>{children}</ThemeContext.Provider>;
 };

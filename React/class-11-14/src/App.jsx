@@ -71,7 +71,7 @@ import UserProvider from "./context/UserProvider";
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <>
+      <> 
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
