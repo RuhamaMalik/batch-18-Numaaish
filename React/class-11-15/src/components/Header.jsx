@@ -33,6 +33,7 @@ const Header = () => {
             Home
           </NavbarLink>
           <NavbarLink   as={Link} to="/about"    >About</NavbarLink>
+          <NavbarLink   as={Link} to="/login"    >Login</NavbarLink>
           <NavbarLink as={NavLink} to="/contact">Contact</NavbarLink>
         </NavbarCollapse>
       </Navbar>

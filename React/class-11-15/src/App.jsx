@@ -67,6 +67,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import UserProvider from "./context/UserProvider";
+import Login from "./components/Login";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -76,8 +77,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="login" element={<Login />} />
           <Route path="contact" element={<Contact />} />
         </Route>
+        
       </>,
     ),
   );
