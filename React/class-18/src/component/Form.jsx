@@ -2,7 +2,7 @@ import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addTask } from "../store/todo/todoSlice";
-
+ 
 export function Form() {
   let dispatch = useDispatch();
   let inputRef = useRef(null);
@@ -10,6 +10,7 @@ export function Form() {
   let handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addTask(inputRef.current.value));
+    inputRef.current.value = ''
   };
 
   return (
