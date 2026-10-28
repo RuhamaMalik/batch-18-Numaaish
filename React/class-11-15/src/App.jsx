@@ -59,37 +59,45 @@
 
 // export default App;
 
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ThemeProvider from "./context/ThemeProvider";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+// import About from "./components/About";
+// import Contact from "./components/Contact";
+const Contact = lazy(() => import("./components/Contact"));
+const About = lazy(() => import("./components/About"));
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import UserProvider from "./context/UserProvider";
 import Login from "./components/Login";
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <> 
+      <>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Suspense  fallback={<h1>Fallback ................................</h1>}>
+            {" "}
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+          </Suspense>
           <Route path="login" element={<Login />} />
-          <Route path="contact" element={<Contact />} />
         </Route>
-        
       </>,
     ),
   );
 
   return (
-   
     <ThemeProvider>
-        <RouterProvider router={router} />
-   </ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 };
 

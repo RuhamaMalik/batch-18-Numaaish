@@ -1,9 +1,13 @@
 // ///////////////////////////////////////// useMemo
 
-import { useCallback, useState } from "react";
+import { Suspense, useCallback, useState } from "react";
 import Child from "./component/Child";
-import Products from "./component/Products";
+// import Products from "./component/Products";
+
+const Lazy = lazy(() => import("./component/Products"));
+
 import Recipies from "./component/Recipies";
+import { lazy } from "react";
 
 // import { useMemo, useState } from "react";
 // import Form from "./component/Form";
@@ -62,12 +66,22 @@ import Recipies from "./component/Recipies";
 // };
 
 // export default App;
+import { BsAirplaneEnginesFill } from "react-icons/bs";
+import { FaAmazon ,} from "react-icons/fa";
 
 const App = () => {
   return (
     <>
-      {/* <Products /> */}
-      <Recipies />
+
+    <BsAirplaneEnginesFill className="text-red-500" />
+    <FaAmazon />
+      {/* <Suspense fallback={<h1>Fallback ................................</h1>} >
+        <Lazy />
+      </Suspense>
+
+      <h1>----------------------------------------------</h1>
+      
+      <Recipies /> */}
     </>
   );
 };
