@@ -1,9 +1,9 @@
 const express = require('express');
 const { get } = require('node:http');
-const { ageCheck } = require('./middlewares');
+const { ageCheck, currentLocation } = require('./middlewares');
 const app = express();
 
-
+app.use(express.urlencoded({ extended: true }))
 
 // app.get('', (req, res) => {
 //     res.send('hello');
@@ -84,14 +84,30 @@ const app = express();
 ///////////////////////  Middleware 
 
 
-app.use(ageCheck); //// application level middleware
+// app.use(ageCheck); //// application level middleware
+// app.use(currentLocation); //// application level middleware
+// app.use(anotherMiddleware); //// application level middleware
 
-app.get('',(req,res)=>{
-res.send('------------------- paas')
-})
-app.get('/products',(req,res)=>{
-res.send('------------------- products')
-})
+// app.get('',(req,res)=>{
+// res.send('------------------- paas')
+// })
+
+// app.get('/products',ageCheck,currentLocation,(req,res)=>{
+// res.send('------------------- products')
+// })
+// app.post('/products',ageCheck,currentLocation,(req,res)=>{
+// res.send('------------------- products')
+// })
+
+// app.get('/profile',(req,res)=>{
+
+// res.set('Content-Type','application/json');
+// res.set('X-Language','Urdu');
+    
+// res.send('------------------- profile')
+// })
+
+
 
 
 app.listen(8000, () => console.log('Server is Running')

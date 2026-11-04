@@ -8,4 +8,17 @@ const ageCheck = (req, res, next) => {
         next();
     }
 }
-module.exports ={ageCheck}
+
+
+const currentLocation = (req, res, next) => {
+    let location = req.query.location
+    if (!location) {
+        res.json({ success: false, msg: 'Enter your location!' })
+    } else if (location !== 'karachi') {
+        res.json({ success: false, msg: 'Bhai karachi mai akar orer karo!' })
+    }else{
+        next();
+    }
+}
+
+module.exports = { ageCheck, currentLocation}
